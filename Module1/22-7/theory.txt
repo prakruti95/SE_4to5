@@ -1,0 +1,74 @@
+Programming:
+
+C Programming
+Editors:
+Online Compiler
+Vscode
+turbo c++
+dev c++
+=====================================================
+C Program Architecture:
+
+1.
+Header Files
+stdio -> standard input output
+conio -> console input output
+
+#include<stdio.h>
+
+# -> pre processor
+include
+stdio
+h -> header file
+
+#include<stdio.h>
+#include<conio.h>
+
+2. Main Function
+->
+int main
+void main
+
+void -> return null value
+main -> method name
+
+3.terminate the program:
+return 0;
+getch();
+=====================================================
+Keyword:
+
+printf -> you can print something
+\n -> new line
+\t -> tab
+
+data type:
+basic data type:
+
+1)integer-int-numeric value[1,2,3 etc..]
+%d
+
+2)float-float-decimal value[15.28,5.6,3.9 etc..]-4 byte
+%f
+
+3)character-char values['T','P']
+%c
+
+4)double-double-decimal values[]-8 byte
+%lf
+
+
+
+variables:
+
+
+
+int a=5;
+float a = 5.6;
+char ch = 'A';
+double d = 67.8999;
+
+Operators:
+Arithmetic Operator : +,-,*,/,%
+
+
