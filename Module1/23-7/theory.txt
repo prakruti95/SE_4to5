@@ -1,0 +1,42 @@
+Install:
+
+C/C++
+C/C++ Extension Pack
+C/C++ Runner
+C/C++ Compile Run
+Code Runner
+
+Uninstall:
+Cmake
+
+User input
+scanf
+shorthand Op-> +=,-=,*=,/=,%=
+
+c+=a//c=c+a
+
+b-=d//b=b-d
+
+c=a+b
+a=a+b
+
+conditions:
+if
+else
+else if
+nested if
+switch,case,break
+
+if(condition)
+{
+	execute
+}
+else
+{
+	execute
+}
+Relational Op: <,>,<=,>=,==,!=
+
+
+
+
