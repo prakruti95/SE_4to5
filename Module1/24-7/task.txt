@@ -1,0 +1,7 @@
+1. Write Program use when statement. Display Monday to Sunday
+
+2. Write a Program of Addition, Subtraction ,Multiplication and Division using
+When (Must Be Menu Driven)
+
+3. Write a program of to find out the Area of Triangle, Rectangle and Circle
+using If Condition.(Must Be Menu Driven)
