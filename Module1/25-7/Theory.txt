@@ -1,0 +1,77 @@
+Looping Statement:
+
+Loop:When you want to do the same work simuntaneously at that time
+you are using loop.
+
+There are two type of loops:
+
+1)Entry Control Loop :
+for
+while
+
+-> condition entry time check
+
+
+2)Exit Control Loop :
+do-while
+
+-> condition exit time check
+
+1)
+for(initialization;condition;incre/decre)
+{
+	statements;
+}
+
+ for(i=1;i<=10;i++);
+ {
+       printf("\n %d",i); 
+ }
+
+a)compile time error
+b)run time error
+c)1 to 10
+d)1
+e)10
+f)11
+
+2) while:
+
+initializaton;
+
+while(condition)
+{
+	statements;
+	incre/decre;
+}
+
+3)do-while:
+
+initialization;
+
+do
+{
+	statement 
+	incre/decre;
+}
+while(condition);
+
+
+
+Task:
+num = 3724;//User input
+-> num reverse
+-> first and last digit sum
+-> biggest digit
+
+
+
+
+
+
+
+
+
+
+
+
