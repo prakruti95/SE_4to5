@@ -1,0 +1,6 @@
+d .write a program you have to find the factorial of given number.
+5!=5*4*3*2*1
+
+e. Write a program you have to print the Fibonacci series up to user given
+number
+
