@@ -1,0 +1,107 @@
+Right to Left: Space
+
+1.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void main() 
+{
+ 
+  int i,j,space;
+  
+  for(i=1;i<=5;i++)
+  {
+      for(space=0;space<=(5-i);space++)
+      {
+          printf(" ");
+      }
+      for(j=1;j<=i;j++)
+      {
+          printf("*");
+      }
+      printf("\n");
+  }
+    
+}
+2.
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void main() 
+{
+ 
+  int i,j,space;
+  
+  for(i=1;i<=5;i++)
+  {
+      for(space=0;space<=(5-i);space++)
+      {
+          printf(" ");
+      }
+      for(j=1;j<=i;j++)
+      {
+          printf("%d",i);
+      }
+      printf("\n");
+  }
+    
+ 
+
+  
+}
+
+3.
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void main() 
+{
+ 
+  int i,j,space;
+  
+  for(i=1;i<=5;i++)
+  {
+      for(space=0;space<=(5-i);space++)
+      {
+          printf(" ");
+      }
+      for(j=1;j<=i;j++)
+      {
+          printf("%d",j);
+      }
+      printf("\n");
+  }
+    
+ 
+
+  
+}
+4.
+// Online C compiler to run C program online
+#include <stdio.h>
+void main() 
+{
+    printf("%d",printf("tops")); 
+}
+
+break,continue
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void main() 
+{
+   int i;
+   for(i=1;i<=10;i++)
+   {
+       if(i==5)
+       {
+          // break;
+            continue;//5
+           
+       }
+       
+     printf("\n %d",i);//1//2//3//4//6
+   }
+}
