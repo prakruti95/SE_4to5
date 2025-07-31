@@ -1,0 +1,73 @@
+Unary Opeators -> ++ ,--
+
+i++ -> post increment
+++i -> pre increment
+i-- -> post decrement
+--i -> pre decrement
+
+
+
+
+int x=4,y,z;
+
+y = --x;//3
+
+z = x--;//3
+
+
+y = 3
+z = 4
+
+printf(x,y,z);
+
+
+Pre /Post
+++i -> pre incre
+i++ -> post incre
+
+--i -> pre decre
+i-- -> post decre
+
+ternary Op
+
+(condition)?st1:st2
+
+1.
+compare three variables using ternary Op and find max num
+a = 4
+b = 6
+c = 3
+
+Functions:
+-> code reuse
+-> when you will implement same code again and again
+-> function is always declared outside main method
+
+return_type fun_name(parameters)
+{
+	return value;
+}
+
+Functions type:
+1) Inbuilt Function
+-> string functions
+-> math functions
+
+2) User defined Function
+ a) with para with return type
+ b) with para without return type
+ c) without para with return type
+ d) without para without return type
+
+
+
+
+
+
+
+
+
+
+
+
+
