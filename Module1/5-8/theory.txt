@@ -1,0 +1,43 @@
+Array:Collection of elements
+
+-> it stored value according to index
+-> array's index will start with 0.
+
+
+variable_name[size]
+
+marks[size]
+
+[]
+
+int m1,m2,m3,m4...
+
+Types of Array:
+1)Single Dimensional Array
+2)Multi Dimensional Array
+
+
+int a[];
+int a[][];
+
+Userinput - 10 values
+
+Asc
+Desc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
