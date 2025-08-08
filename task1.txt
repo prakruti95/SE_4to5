@@ -1,0 +1,40 @@
+Task Title: Student Marks Management System
+
+Problem Statement:
+Create a program in C that helps a teacher manage student marks. The program should allow the user to:
+
+Enter the number of students (max 100).
+
+Input each student's name and marks in 3 subjects.
+
+Calculate total and average marks for each student.
+
+Display all students’ information in a table format.
+
+Find and display:
+
+Student with the highest average.
+
+Student with the lowest average.
+
+Count of students who passed (average ≥ 40).
+
+Count of students who failed (average < 40).
+
+--------------------------------------------------------------------------------------
+Requirements:
+Use arrays to store student data.
+
+Use functions to:
+
+Take input.
+
+Calculate total and average.
+
+Display results.
+
+Use loops for input/output processing.
+
+Use if/else conditions to check pass/fail and find max/min averages.
+
+Use appropriate data types.
