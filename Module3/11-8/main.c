@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+void inputStudentData(int n, char names[][50], int marks[][3]) 
+{
+    for (int i = 0; i < n; i++) 
+    {
+        printf("\nEnter details for Student %d:\n", i + 1);
+        printf("Name: ");
+        scanf("%s", names[i]);
+
+        printf("Enter marks in 3 subjects: ");
+        for (int j = 0; j < 3; j++) 
+         {
+            scanf("%d", &marks[i][j]);
+        }
+    }
+}
+
+void calculateTotalAverage(int n, int marks[][3], int total[], float average[]) 
+{
+    for (int i = 0; i < n; i++) 
+    {
+        total[i] = 0;
+        for (int j = 0; j < 3; j++) 
+        {
+            total[i] += marks[i][j];
+        }
+        average[i] = total[i] / 3.0;
+    }
+}
+
+void displayReport(int n, char names[][50], int total[], float average[]) 
+{
+    printf("\n--- Student Report ---\n");
+
+    printf("Name\t\tTotal\tAverage\tResult\n");
+
+    for (int i = 0; i < n; i++) 
+     {
+        printf("%s\t\t%d\t%.2f\t%s\n", names[i], total[i], average[i],
+              average[i] >= 40 ? "Pass" : "Fail");
+    }
+}
+
+void findStats(int n, char names[][50], float average[]) 
+{
+    int topIndex = 0, lowIndex = 0;
+    int passCount = 0, failCount = 0;
+
+    for (int i = 0; i < n; i++) 
+       {
+        if (average[i] > average[topIndex]) 
+         {
+            topIndex = i;
+        }
+        if (average[i] < average[lowIndex]) {
+            lowIndex = i;
+        }
+
+        if (average[i] >= 40)
+            passCount++;
+        else
+            failCount++;
+    }
+
+    printf("\nTopper: %s (%.2f)\n", names[topIndex], average[topIndex]);
+    printf("Lowest Average: %s (%.2f)\n", names[lowIndex], average[lowIndex]);
+    printf("Passed: %d\n", passCount);
+    printf("Failed: %d\n", failCount);
+}
+
+int main() 
+{
+    int n;
+    
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    char names[100][50];
+    int marks[100][3];
+    int total[100];
+    float average[100];
+
+    inputStudentData(n, names, marks);
+    calculateTotalAverage(n, marks, total, average);
+    displayReport(n, names, total, average);
+    findStats(n, names, average);
+
+    return 0;
+}
