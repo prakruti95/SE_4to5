@@ -1,5 +1,3 @@
-
-
 #include<stdio.h>
 
 void main()
@@ -8,6 +6,7 @@ void main()
     int *p;
     int i;
    
+//set
     p=&a[0];
     printf("\tEnter Values of array\n");
 
@@ -16,7 +15,8 @@ void main()
           printf("\na[%d]:\t",i+1);
           scanf("%d",&(*p++));
     }
-    
+
+//get    
    p=&a[0];
     printf("\nValue of Array:\n");
     
