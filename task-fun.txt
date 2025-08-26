@@ -1,0 +1,2 @@
+c. Display Prime Numbers Between Intervals
+d. C Program to Check Prime or Armstrong Number 
