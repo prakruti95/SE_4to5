@@ -1,0 +1,14 @@
+Access Modifier/Specifier:
+public
+private
+protected
+
+Constructor:Method having a same as a classname
+
+Types of Constructor
+1)default constructor
+2)parameterized constructor
+3)copy constructor
+
+
+
