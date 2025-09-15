@@ -1,0 +1,830 @@
+c++ basic input/output:
+
+1)
+#include <iostream>  
+using namespace std;  
+
+int main( ) 
+{  
+   char ary[] = "Welcome to C++tutorial";  
+   cout << "Value of ary is: " << ary << endl;  
+}
+
+2)
+
+#include <iostream>  
+using namespace std;  
+int main( ) {  
+  int age;  
+   cout << "Enter your age: ";  
+   cin >> age;  
+   cout << "Your age is: " << age << endl;  
+}  
+
+3)
+#include <iostream>  
+using namespace std;  
+int main( ) {  
+cout << "C++ Tutorial";     
+cout << " Tops"<<endl;   
+cout << "End of line"<<endl;   
+}   
+
+->variable declaration
+->datatypes
+->if,else if,else
+->age,gradding system
+example
+
+4)odd even
+#include <iostream>  
+using namespace std;  
+   
+int main () {  
+   int num = 10;    
+            if (num % 2 == 0)    
+            {    
+                cout<<"It is even number";    
+            }   
+   return 0;  
+}  
+  
+5)switch-case
+
+#include <iostream>  
+using namespace std;  
+int main () {  
+       int num;  
+       cout<<"Enter a number to check grade:";    
+       cin>>num;  
+           switch (num)    
+          {    
+              case 10: cout<<"It is 10"; break;    
+              case 20: cout<<"It is 20"; break;    
+              case 30: cout<<"It is 30"; break;    
+              default: cout<<"Not 10, 20 or 30"; break;    
+          }    
+    }    
+
+6)for loop
+#include <iostream>  
+using namespace std;  
+int main() {  
+         for(int i=1;i<=10;i++){      
+            cout<<i <<"\n";      
+          }       
+    }   
+
+7)while loop
+#include <iostream>  
+using namespace std;  
+int main() {         
+ int i=1;      
+         while(i<=10)   
+       {      
+            cout<<i <<"\n";    
+            i++;  
+          }       
+    }  
+
+8)do while loop
+#include <iostream>  
+using namespace std;  
+int main() {  
+     int i = 1;    
+          do{    
+              cout<<i<<"\n";    
+              i++;    
+          } while (i <= 10) ;    
+}  
+
+9)
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+ineligible:    
+         cout<<"You are not eligible to vote!\n";    
+      
+	cout<<"Enter your age:\n";    
+      int age;  
+      cin>>age;
+  
+      if (age < 18)
+      {
+     
+              goto ineligible;    
+      }    
+      else    
+      {    
+              cout<<"You are eligible to vote!";     
+      }         
+}  
+
+10)object and class
+#include <iostream>  
+using namespace std;  
+class Student 
+{  
+   public:  
+      int id;//data member (also instance variable)      
+      string name;//data member(also instance variable)      
+};  
+int main() {  
+    Student s1; 
+	
+//creating an object of Student   
+    s1.id = 201;    
+    s1.name = "Sonoo Jaiswal";   
+    cout<<s1.id<<endl;  
+    cout<<s1.name<<endl;  
+    return 0;  
+}  
+
+11)constructor:method having a same as a class name
+use-refrence
+
+types of constructor:
+1)default
+2)parameterized
+3)copy
+
+#include <iostream>  
+using namespace std;  
+class Employee  
+ {  
+   public:  
+        Employee()    
+        {    
+            cout<<"Default Constructor Invoked"<<endl;    
+        }    
+};  
+int main(void)   
+{  
+    Employee e1; //creating an object of Employee   
+    Employee e2;   
+    return 0;  
+}  
+
+12)destructor
+#include <iostream>  
+using namespace std;  
+class Employee  
+ {  
+   public:  
+        Employee()    
+        {    
+            cout<<"Constructor Invoked"<<endl;    
+        }    
+        ~Employee()    
+        {    
+            cout<<"Destructor Invoked"<<endl;    
+        }  
+};  
+int main(void)   
+{  
+    Employee e1; //creating an object of Employee   
+    Employee e2; //creating an object of Employee  
+    return 0;  
+}  
+
+13)this pointer/parameterized
+#include <iostream>  
+using namespace std;  
+class Employee {  
+   public:  
+       int id; //data member (also instance variable)      
+       string name; //data member(also instance variable)  
+       float salary;  
+       Employee(int id, string name, float salary)    
+        {    
+             this->id = id;    
+            this->name = name;    
+            this->salary = salary;   
+        }    
+       void display()    
+        {    
+            cout<<id<<"  "<<name<<"  "<<salary<<endl;    
+        }    
+};  
+int main(void) {  
+    Employee e1 =Employee(101, "Sonoo", 890000); //creating an object of Employee   
+    Employee e2=Employee(102, "Nakul", 59000); //creating an object of Employee  
+    e1.display();    
+    e2.display();    
+    return 0;  
+}  
+----------------------------------------------
+inheritence:
+1)single
+2)multilevel
+3)multiple
+4)hierarchicaL
+5)HYBRID
+
+14)single:
+#include <iostream>  
+using namespace std;  
+ class Account 
+ {  
+   public:  
+   float salary = 60000;   
+ };  
+   class Programmer: public Account {  
+   public:  
+   float bonus = 5000;    
+   };       
+int main(void) {  
+     Programmer p1;  
+     cout<<"Salary: "<<p1.salary<<endl;    
+     cout<<"Bonus: "<<p1.bonus<<endl;    
+    return 0;  
+}  
+
+15)multilevel:
+#include <iostream>  
+using namespace std;  
+ class Animal 
+{  
+   public:  
+ void eat() 
+{   
+    cout<<"Eating..."<<endl;   
+ }    
+   };  
+   class Dog: public Animal   
+   {    
+       public:  
+     void bark(){  
+    cout<<"Barking..."<<endl;   
+     }    
+   };   
+   class BabyDog: public Dog   
+   {    
+       public:  
+     void weep() {  
+    cout<<"Weeping...";   
+     }    
+   };   
+int main(void) {  
+    BabyDog d1;  
+    d1.eat();  
+    d1.bark();  
+     d1.weep();  
+     return 0;  
+}  
+
+16)multiple:
+#include <iostream>  
+using namespace std;  
+
+class A  
+{  
+    protected:  
+     int a;  
+
+    public:  
+    void get_a(int n)  
+    {  
+        a = n;  
+    }  
+};  
+  
+class B  
+{  
+    protected:  
+    int b;  
+
+    public:  
+    void get_b(int n)  
+    {  
+        b = n;  
+    }  
+};  
+class C : public A,public B  
+{
+   public:  
+    void display()  
+    {  
+        cout << "The value of a is : " <<a<<endl;  
+        cout << "The value of b is : " <<b<<endl;  
+        cout<<"Addition of a and b is : "<<a+b;  
+    }  
+};  
+int main()  
+{  
+   C c;  
+   c.get_a(10);  
+   c.get_b(20);  
+   c.display();  
+  
+    return 0;  
+}  
+
+17)hybrid
+
+#include <iostream>  
+using namespace std;  
+
+class A  
+{  
+    protected:  
+    int a;  
+
+    public:  
+    void get_a()  
+    {  
+       cout << "Enter the value of 'a' : " <<endl;  
+       cin>>a;  
+    }  
+};  
+  
+class B : public A   
+{  
+    protected:  
+    int b;  
+
+    public:  
+    void get_b()  
+    {  
+        cout << "Enter the value of 'b' : " << endl;  
+       cin>>b;  
+    }  
+};  
+class C  
+{  
+    protected:  
+    int c;
+  
+    public:  
+    void get_c()  
+    {  
+        cout << "Enter the value of c is : " <<endl;  
+        cin>>c;  
+    }  
+};  
+  
+class D : public B, public C  
+{  
+    protected:  
+    int d;  
+    public: 
+ 
+    void mul()  
+    {  
+         get_a();  
+         get_b();  
+         get_c();  
+         cout << "Multiplication of a,b,c is : " <<a*b*c<< std::endl;  
+    }  
+};  
+int main()  
+{  
+    D d;  
+    d.mul();  
+    return 0;  
+}  
+
+18)hierarchical
+#include <iostream>  
+using namespace std; 
+ 
+class Shape                 // Declaration of baseclass
+{  
+    public:  
+    int a;  
+    int b;  
+    void get_data(int n,int m)  
+    {  
+        a= n;  
+        b = m;  
+    }  
+};  
+
+class Rectangle : public Shape  // inheriting Shapeclass  
+{  
+    public:  
+    int rect_area()  
+    {  
+        int result = a*b;  
+        return result;  
+    }  
+}; 
+ 
+class Triangle : public Shape    // inheriting Shape class  
+{  
+    public:  
+    int triangle_area()  
+    {  
+        float result = 0.5*a*b;  
+        return result;  
+    }  
+};  
+int main()  
+{  
+    Rectangle r;  
+    Triangle t; 
+ 
+    int length,breadth,base,height;
+  
+    cout << "Enter the length and breadth of a rectangle: " 
+    cin>>length>>breadth;  
+    
+	r.get_data(length,breadth);  
+
+    int m = r.rect_area();  
+
+    cout << "Area of the rectangle is : " <<m<< endl;  
+  
+  cout << "Enter the base and height of the triangle: "endl;  
+    cin>>base>>height;  
+
+    t.get_data(base,height);  
+
+    float n = t.triangle_area();  
+
+    std::cout <<"Area of the triangle is : "  << n<<std::endl;  
+
+    return 0;  
+}  
+
+19)static
+#include <iostream>  
+using namespace std;  
+class Account {  
+   public:  
+       int accno; //data member (also instance variable)      
+       string name; //data member(also instance variable)  
+       static float rateOfInterest;   
+       Account(int accno, string name)   
+        {    
+             this->accno = accno;    
+            this->name = name;    
+        }    
+       void display()    
+        {    
+            cout<<accno<< "<<name<< " "<<rateOfInterest<<endl;   
+        }    
+};  
+
+float Account::rateOfInterest=6.5;  
+
+int main(void) {  
+    Account a1 =Account(201, "Sanjay"); //creating an object of Employee   
+    Account a2=Account(202, "Nakul"); //creating an object of Employee  
+    a1.display();    
+    a2.display();    
+    return 0;  
+}  
+
+20)counting objects:
+
+#include <iostream>  
+using namespace std;  
+
+class Account 
+{  
+   public:  
+       int accno; //data member (also instance variable)      
+       string name;  
+ 
+       static int count; 
+    
+       Account(int accno, string name)   
+        {    
+             this->accno = accno;    
+            this->name = name;    
+          
+  		count++;  
+        }    
+       void display()    
+        {    
+            cout<<accno<<" "<<name<<endl;   
+        }    
+};  
+int Account::count=0;  
+int main(void) 
+{  
+    Account a1 =Account(201, "Sanjay"); //creating an object of Account  
+    Account a2=Account(202, "Nakul");   
+     Account a3=Account(203, "Ranjana");  
+
+    a1.display();    
+    a2.display();    
+    a3.display();    
+
+    cout<<"Total Objects are: "<<Account::count;  
+    return 0;  
+}  
+
+********
+21)struct
+#include <iostream>    
+using namespace std; 
+   
+ struct Rectangle      
+{      
+   int width, height;      
+      
+ };      
+int main(void)
+{    
+    struct Rectangle rec;    
+
+    rec.width=8;    
+    rec.height=5;    
+
+   cout<<"Area of Rectangle is: "<<(rec.width * rec.height)<<endl;    
+ return 0;    
+}    
+
+22)structure using constructor
+
+#include <iostream>    
+using namespace std; 
+   
+struct Rectangle
+{      
+   int width, height;      
+
+  Rectangle(int w, int h)      
+    {      
+        width = w;      
+        height = h;      
+    }      
+  void areaOfRectangle() 
+{       
+    cout<<"Area of Rectangle is: "<<(width*height); 
+}      
+};      
+int main(void) {    
+    struct Rectangle rec=Rectangle(4,6);    
+    rec.areaOfRectangle();    
+   return 0;    
+}    
+23)overloading:
+
+method having a same name but number of parameters are diffrent
+
+#include <iostream>    
+using namespace std; 
+   
+
+class Cal 
+{    
+    public:    
+
+static int add(int a,int b)
+{      
+        return a + b;      
+}  
+
+    
+static int add(int a, int b, int c)      
+    {      
+        return a * b * c;      
+    }      
+};     
+int main(void) 
+{    
+     Cal c;                                                   //     class object declaration.   
+    cout<<C.add(10, 20)<<endl;      
+    cout<<C.add(12, 20, 23);    
+ 
+   return 0;    
+}    
+
+24)overriding:
+
+#include <iostream>  
+using namespace std;  
+class Animal 
+{  
+    public:  
+void eat()
+{    
+cout<<"Eating...";    
+}      
+}; 
+  
+class Dog: public Animal    
+{    
+ public:  
+ void eat()    
+{    
+       cout<<"Eating bread...";    
+    }    
+};  
+int main(void) {  
+
+   Dog d ;    
+ 
+   d.eat();  
+
+   return 0;  
+}
+*******
+25)virtual function:
+
+#include <iostream>  
+using namespace std;
+  
+class A  
+{  
+   int x=5;  
+
+    public:  
+    void display()  
+    {  
+
+        std::cout << "Value of x is : " << x<<std::endl;  
+    }  
+};  
+
+class B: public A  
+{  
+    int y = 10;  
+    public:  
+    void display()  
+    {  
+        std::cout << "Value of y is : " <<y<< std::endl;  
+    }  
+};  
+int main()  
+{  
+    A *a;
+
+
+  
+    B b;  
+
+    a = &b;  
+   a->display();  
+    return 0;  
+}  
+
+26)abstract class-virtual method
+#include <iostream>  
+using namespace std;  
+ class Shape    
+{    
+    public:   
+    virtual void draw()=0;    
+};    
+ class Rectangle : Shape    
+{    
+    public:  
+     void draw()    
+    {    
+        cout < <"drawing rectangle..." < <endl;    
+    }    
+};    
+class Circle : Shape    
+{    
+    public:  
+     void draw()    
+    {    
+        cout <<"drawing circle..." < <endl;    
+    }    
+};    
+int main( ) {  
+    Rectangle rec;  
+    Circle cir;
+  
+    rec.draw();    
+    cir.draw();   
+   return 0;  
+}  
+27)another abstraction:
+
+#include <iostream>    
+using namespace std;    
+ class Sum    
+{    
+private: int x, y, z; // private variables  
+
+public:    
+void add()    
+{    
+cout<<"Enter two numbers: ";    
+cin>>x>>y;    
+z= x+y;    
+cout<<"Sum of two number is: "<<z<<endl;    
+}    
+};    
+int main()    
+{    
+Sum sm;    
+sm.add();    
+return 0;    
+}    
+
+28)string
+#include <iostream>  
+using namespace std;  
+int main( ) 
+{  
+    	string s1 = "Hello";    
+
+        char ch[] = { 'C', '+', '+'};    
+ 
+        string s2 = string(ch);    
+        cout<<s1<<endl;    
+        cout<<s2<<endl;    
+}  
+
+29)strcmp
+#include <iostream>  
+#include <cstring>  
+using namespace std;  
+
+int main ()  
+{  
+  char key[] = "mango"; 
+ 
+  char buffer[50];  
+
+  do 
+{  
+     cout<<"What is my favourite fruit? ";  
+     cin>>buffer;  
+  } 
+while (strcmp (key,buffer) != 0);
+  
+ cout<<"Answer is correct!!"<<endl;  
+  return 0;  
+}  
+
+30)strcat-string concat
+
+#include <iostream>  
+#include <cstring>  
+using namespace std;  
+int main()  
+{  
+    char key[25], buffer[25];  
+
+    cout << "Enter the key string: ";  
+    cin.getline(key, 25);  
+
+    cout << "Enter the buffer string: ";  
+     cin.getline(buffer, 25); 
+ 
+    strcat(key, buffer);   
+    cout << "Key = " << key << endl;  
+    cout << "Buffer = " << buffer<<endl;  
+    return 0;  
+}  
+
+31)strcpy
+#include <iostream>  
+#include <cstring>  
+using namespace std;  
+int main()  
+{  
+    char key[25], buffer[25];
+  
+    cout << "Enter the key string: ";  
+    cin.getline(key, 25); 
+ 
+    strcpy(buffer, key);  
+    cout << "Key = "<< key << endl;  
+    cout << "Buffer = "<< buffer<<endl;  
+    return 0;  
+}  
+
+32)strlen
+#include <iostream>  
+#include <cstring>  
+using namespace std;  
+int main()  
+{  
+    char ary[] = "Welcome to C++ Programming";  
+    cout << "Length of String = " << strlen(ary)<<endl;  
+    return 0;  
+}  
+
+33)exception:
+
+#include <iostream>  
+using namespace std;  
+float division(int x, int y) {  
+   if( y == 0 ) {  
+      throw "Attempted to divide by zero!";  
+   }  
+   return (x/y);  
+}  
+int main () {  
+   int i = 25;  
+   int j = 0;  
+   float k = 0;  
+   try {  
+      k = division(i, j);  
+      cout << k << endl;  
+   }catch (const char* e) {  
+      cerr << e << endl;  
+   }  
+   return 0;  
+}  
+
+
