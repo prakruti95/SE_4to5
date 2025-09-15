@@ -1,0 +1,7 @@
+    int num1 = 10;
+    float num2 = 5.5;
+    float result = num1 + num2; // num1 (int) is implicitly converted to float
+
+    int num_int = 10;
+    float num_float = num_int; // Explicitly converts num_int to float
+
