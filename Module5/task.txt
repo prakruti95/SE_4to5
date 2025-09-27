@@ -1,0 +1,20 @@
+Task 1:
+1)create db with the name of tops
+-> 
+2)create table with the name of students and predefined column is
+id and student_name
+->
+3)After creation of table add one more column student_fees
+->
+4)After creation of table and student_fees add one more column 
+student_grade[int]
+->
+5)change datatype of student grade[varchar]
+->
+6)remove column student_grade
+->
+
+Task 2:
+-> in same database create new table EMP
+-> add first 3 columns in 1st query
+-> other fields shoule be enter by alter query
