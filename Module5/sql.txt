@@ -95,6 +95,72 @@ DROP TABLE information
 TRUNCATE TABLE TABLE_NAME
 TRUNCATE TABLE information
 
+DML
+11. insert data
+insert into tablename (database Field nm) values ('control value')
+
+12. multiple value insert
+INSERT INTO tablename (countrynm) VALUES('india'), ('pakistan')
+
+
+13. update data
+update tablenm set databasefieldnm='controlvalue' where id='id'
+
+14. delete data
+delete from tablenm where id='id'
+
+DQL
+15. select all
+select * from tablenm
+
+16. particular column dispaly
+SELECT columnnm from tablenm
+
+17. particular row display
+select * from tablenm where id='id' 
+
+18.order by
+select colnm from tblnm order by colnm asc/desc
+
+DCL -> data control language
+rollback,commit
+
+START TRANSACTION;
+ROLLBACK;
+START TRANSACTION;
+COMMIT;
+
+Functions:
+
+1)Agreegate functions
+MAX,MIN,SUM,AVG,COUNT,FIRST,LAST
+SELECT MAX(p_price) from products
+SELECT p_price from products LIMIT 1;
+SELECT * from  products order by p_price DESC LIMIT 1;
+
+
+2)Scalar Functions
+UCASE() - Converts a field to upper case
+-> SELECT UCASE(NAME) FROM Students; 
+
+LCASE() - Converts a field to lower case
+->SELECT LCASE(NAME) FROM Students; 
+
+MID() - Extract characters from a text field
+-> SELECT MID(NAME,1,4) FROM Students; 
+
+LEN() - Returns the length of a text field
+-> SELECT LENGTH(NAME) FROM Students; 
+
+ROUND() - Rounds a numeric field to the number of decimals specified
+-> SELECT ROUND(NUMBER) FROM Students; 
+
+NOW() - Returns the current system date and time
+-> SELECT NAME, NOW() AS DateTime FROM Students;
+
+FORMAT() - Formats how a field is to be displayed
+-> SELECT NAME, FORMAT(Now(),'YYYY-MM-DD') AS Date FROM
+Students; 
 
 
 
