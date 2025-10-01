@@ -162,6 +162,22 @@ FORMAT() - Formats how a field is to be displayed
 -> SELECT NAME, FORMAT(Now(),'YYYY-MM-DD') AS Date FROM
 Students; 
 
+Constraint Keys:
+1)primary key -> avoid data duplication
+2)foreign key -> provide refrence[JOIN]
+3)unique key -> uniquely identify data
+
+
+JOINS:
+1) INNER JOIN
+2) LEFT JOIN
+3) RIGHT JOIN
+4) FULL JOIN
+
+SELECT * FROM location LEFT JOIN products ON location.lid = products.id
+UNION
+SELECT * FROM location RIGHT JOIN products ON location.lid = products.id
+
 
 
 
