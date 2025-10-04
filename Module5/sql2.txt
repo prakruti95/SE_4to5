@@ -1,0 +1,59 @@
+Procedure:
+->procedure may have a return type
+
+DELIMITER //
+
+	CREATE PROCEDURE myproc(INOUT myid int)
+    
+    BEGIN
+    	SELECT * FROM details WHERE id = myid;
+    END //
+
+DELIMITER ;
+
+indexer
+1.
+
+CREATE INDEX myindex
+ON user (name,email);
+
+2.
+
+normalization
+
+procedure &function
+
+DELIMITER //
+
+CREATE PROCEDURE selectdata(INOUT myid int)
+
+BEGIN
+
+SELECT*FROM user WHERE id=myid;
+
+END //
+
+DELIMITER ;
+
+SET @po='5';
+CALL selectdata(@po);
+
+
+
+
+update:
+
+DELIMITER //
+
+CREATE PROCEDURE selectdata(INOUT myid int)
+
+BEGIN
+
+UPDATE user set name='java' WHERE id=myid;
+
+END //
+
+DELIMITER ;
+
+
+-> create view myview as select colname from tablename
